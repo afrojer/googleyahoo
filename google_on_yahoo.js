@@ -26,6 +26,7 @@
 // @namespace     https://raw.github.com/afrojer/googleyahoo/master/google_on_yahoo.js
 // @description   use Google's search on the My Yahoo page
 // @match         https://my.yahoo.com*
+// @grant         none
 // @copyright     2005 Joe Grossberg, 2013+ Jeremy C. Andrus
 // ==/UserScript==
 
