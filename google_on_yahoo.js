@@ -33,7 +33,7 @@
 function fixSearchBox() {
     var searchform = document.getElementById('UHSearch');
     searchform.onsubmit = 'void(null)';
-    searchform.action = 'http://www.google.com/search?hl=en&btnG=Google+Search';
+    searchform.action = 'https://www.google.com/search?hl=en&btnG=Google+Search';
     var searchinput = document.getElementById('UHSearchBox');
     searchinput.name = 'q';
     var subinput = document.getElementById('UHSearchProperty');
