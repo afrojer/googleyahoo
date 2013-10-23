@@ -1,6 +1,6 @@
 // Google Search on My Yahoo
-// version 0.2
-// 2013-10-22
+// version 0.3
+// 2013-10-23
 // Copyright (c) 2005, Joe Grossberg
 // Copyright (c) 2013, Jeremy C. Andrus
 // under Creative Commons SA 1.0
@@ -22,9 +22,9 @@
 //
 // ==UserScript==
 // @name          Google Search on My Yahoo
-// @version       0.2
+// @version       0.3
 // @namespace     https://raw.github.com/afrojer/googleyahoo/master/google_on_yahoo.js
-// @description   use Google's search on the My Yahoo page
+// @description   Use Google's search on the My Yahoo page
 // @match         https://my.yahoo.com*
 // @grant         none
 // @copyright     2005 Joe Grossberg, 2013+ Jeremy C. Andrus
