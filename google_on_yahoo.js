@@ -41,7 +41,19 @@ function fixSearchBox() {
     var subinputbtn = document.getElementById('UHSearchWeb');
     subinputbtn.value = 'Google Search';
 
+    // set the document title
     document.title = 'Home';
+
+    // remove the goofy Yahoo! animation
+    var animlogo = document.getElementById('yucs-logo-ani');
+    var animlnk = document.getElementById('yucs-link-ani');
+    var animspan = document.getElementById('animator');
+    animspan.id = 'XX-animator';
+    animlogo.id = 'XX-logo';
+    animlogo.text = 'My Home';
+    animlogo.setAttribute('style', "background-image: url('http://jeremya.com/files/images/transformers_logo.png') !important;");
+    animlnk.id = 'XX-link';
+    animlnk.innerHTML = "";
 }
 
 (function() {
