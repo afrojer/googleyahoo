@@ -40,6 +40,8 @@ function fixSearchBox() {
     subinput.value = 'Google Search';
     var subinputbtn = document.getElementById('UHSearchWeb');
     subinputbtn.value = 'Google Search';
+
+    document.title = 'Home';
 }
 
 (function() {
