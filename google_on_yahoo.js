@@ -30,6 +30,30 @@
 // @copyright     2005 Joe Grossberg, 2013+ Jeremy C. Andrus
 // ==/UserScript==
 
+// HTML5™, baby! http://mathiasbynens.be/notes/document-head
+document.head || (document.head = document.getElementsByTagName('head')[0]);
+
+function removeFavIcon() {
+    var links = document.head.getElementsByTagName("link");
+    for (var i=0; i<links.length; i++) {
+        var link = links[i];
+        //if (link.type=="image/x-icon" && link.rel=="shortcut icon") {
+        if (link.rel=="shortcut icon") {
+            document.head.removeChild(link);
+            return; // Assuming only one match at most.
+        }
+    }
+}
+
+function changeFavicon(src) {
+    var link = document.createElement('link');
+    link.type = 'image/x-icon';
+    link.rel = 'shortcut icon';
+    link.href = src;
+    removeFavIcon();
+    document.head.appendChild(link);
+}
+
 function fixSearchBox() {
     var searchform = document.getElementById('UHSearch');
     searchform.onsubmit = 'void(null)';
@@ -54,6 +78,9 @@ function fixSearchBox() {
     animlogo.setAttribute('style', "background-image: url('http://jeremya.com/files/images/transformers_logo.png') !important;");
     animlnk.id = 'XX-link';
     animlnk.innerHTML = "";
+
+    // favicon!
+    changeFavicon('http://jeremya.com/files/2011/05/favicon.ico');
 }
 
 (function() {
